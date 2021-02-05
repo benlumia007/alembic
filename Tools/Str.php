@@ -1,6 +1,6 @@
 <?php
 
-namespace Merlot\Tools;
+namespace Benlumia007\Alembic\Tools;
 
 class Str {
 

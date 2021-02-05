@@ -1,9 +1,9 @@
 <?php
 
-namespace Merlot\Entry;
+namespace Benlumia007\Alembic\Entry;
 
-use Merlot\Entry\Types\Type;
-use Merlot\Tools\Collection;
+use Benlumia007\Alembic\Entry\Types\Type;
+use Benlumia007\Alembic\Tools\Collection;
 
 class Types extends Collection {
 

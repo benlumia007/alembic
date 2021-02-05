@@ -1,11 +1,11 @@
 <?php
 
-namespace Merlot\Entry\Types;
+namespace Benlumia007\Alembic\Entry\Types;
 
-use Merlot\Controllers\Literature as Controller;
-use Merlot\Controllers\LiteratureArchive;
-use Merlot\Routing\Routes;
-use Merlot\App;
+use Benlumia007\Alembic\Controllers\Literature as Controller;
+use Benlumia007\Alembic\Controllers\LiteratureArchive;
+use Benlumia007\Alembic\Routing\Routes;
+use Benlumia007\Alembic\App;
 
 class Literature extends Type {
 

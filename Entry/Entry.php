@@ -1,15 +1,15 @@
 <?php
 
-namespace Merlot\Entry;
+namespace Benlumia007\Alembic\Entry;
 
 use ParsedownExtra;
-//use Merlot\Tools\Markdown;
+//use Benlumia007\Alembic\Tools\Markdown;
 
 use Michelf\SmartyPants;
 use Michelf\SmartyPantsTypographer;
-use Merlot\Yaml\FrontMatter;
-use Merlot\App;
-use Merlot\ContentTypes;
+use Benlumia007\Alembic\Yaml\FrontMatter;
+use Benlumia007\Alembic\App;
+use Benlumia007\Alembic\ContentTypes;
 use DateTime;
 
 class Entry {

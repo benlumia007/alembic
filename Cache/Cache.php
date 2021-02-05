@@ -1,9 +1,9 @@
 <?php
 
-namespace Merlot\Cache;
+namespace Benlumia007\Alembic\Cache;
 
-use Merlot\App;
-use Merlot\Tools\Collection;
+use Benlumia007\Alembic\App;
+use Benlumia007\Alembic\Tools\Collection;
 
 class Cache {
 

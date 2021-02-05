@@ -1,13 +1,13 @@
 <?php
 
-namespace Merlot\Controllers;
+namespace Benlumia007\Alembic\Controllers;
 
-use Merlot\Entry\Entries;
-use Merlot\Entry\Locator;
-//use Merlot\Entry\Types\Post;
-use Merlot\Engine;
+use Benlumia007\Alembic\Entry\Entries;
+use Benlumia007\Alembic\Entry\Locator;
+//use Benlumia007\Alembic\Entry\Types\Post;
+use Benlumia007\Alembic\Engine;
 
-use Merlot\App;
+use Benlumia007\Alembic\App;
 
 class Error404 {
 

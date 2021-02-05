@@ -5,16 +5,16 @@
  * This is the base service provider class. This is an abstract class that must
  * be extended to create new service providers for the application.
  *
- * @package   MerlotCore
+ * @package   Benlumia007\AlembicCore
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2008 - 2018, Justin Tadlock
  * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Merlot\Tools;
+namespace Benlumia007\Alembic\Tools;
 
-use Merlot\Contracts\Core\Application;
+use Benlumia007\Alembic\Contracts\Core\Application;
 
 /**
  * Service provider class.

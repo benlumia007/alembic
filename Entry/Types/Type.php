@@ -7,16 +7,16 @@
  * one-true instance of the framework. It's used to load up service providers
  * that interact with the container.
  *
- * @package   Merlot
+ * @package   Benlumia007\Alembic
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright Copyright 2021. Benjamin Lu
  * @link      https://github.com/benlumia007/benjlu
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Merlot\Entry\Types;
+namespace Benlumia007\Alembic\Entry\Types;
 
-use Merlot\Routing\Routes;
+use Benlumia007\Alembic\Routing\Routes;
 
 abstract class Type {
 

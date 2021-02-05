@@ -1,9 +1,9 @@
 <?php
 
-namespace Merlot\Entry;
+namespace Benlumia007\Alembic\Entry;
 
-use Merlot\App;
-use Merlot\Yaml\FrontMatter;
+use Benlumia007\Alembic\App;
+use Benlumia007\Alembic\Yaml\FrontMatter;
 
 class Locator {
 

@@ -7,20 +7,20 @@
  * one-true instance of the framework. It's used to load up service providers
  * that interact with the container.
  *
- * @package   Merlot
+ * @package   Benlumia007\Alembic
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright Copyright 2021. Benjamin Lu
  * @link      https://github.com/benlumia007/benjlu
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Merlot\Core;
+namespace Benlumia007\Alembic\Core;
 
-use Merlot\Container\Container;
-use Merlot\Contracts\Core\Application as ApplicationContract;
-use Merlot\Contracts\Bootable;
-use Merlot\Proxies\Proxy;
-use Merlot\Proxies\App;
+use Benlumia007\Alembic\Container\Container;
+use Benlumia007\Alembic\Contracts\Core\Application as FrameworkContract;
+use Benlumia007\Alembic\Contracts\Bootable;
+use Benlumia007\Alembic\Proxies\Proxy;
+use Benlumia007\Alembic\Proxies\App;
 
 /**
  * Application class.
@@ -28,7 +28,7 @@ use Merlot\Proxies\App;
  * @since  1.0.0
  * @access public
  */
-class Application extends Container implements ApplicationContract, Bootable {
+class Framework extends Container implements FrameworkContract, Bootable {
 
 	/**
 	 * The current version of the framework.
@@ -113,7 +113,7 @@ class Application extends Container implements ApplicationContract, Bootable {
 	 */
 	protected function registerDefaultProxies() {
 
-		$this->proxy( App::class, '\Merlot\App' );
+		$this->proxy( App::class, '\Benlumia007\Alembic\App' );
 	}
 
 	/**

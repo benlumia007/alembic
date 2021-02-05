@@ -1,6 +1,6 @@
 <?php
 
-namespace Merlot\Template\Engine;
+namespace Benlumia007\Alembic\Template\Engine;
 
 class View {
 

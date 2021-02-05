@@ -1,8 +1,8 @@
 <?php
 
-namespace Merlot\Entry;
+namespace Benlumia007\Alembic\Entry;
 
-use Merlot\App;
+use Benlumia007\Alembic\App;
 
 class Entries {
 

@@ -2,18 +2,18 @@
 /**
  * Routing class.
  *
- * @package   Merlot
+ * @package   Benlumia007\Alembic
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright Copyright 2021. Benjamin Lu
  * @link      https://github.com/benlumia007/benjlu
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Merlot\Routing;
+namespace Benlumia007\Alembic\Routing;
 
-use Merlot\App;
-use Merlot\Http\Request;
-use Merlot\Tools\Collection;
+use Benlumia007\Alembic\App;
+use Benlumia007\Alembic\Http\Request;
+use Benlumia007\Alembic\Tools\Collection;
 
 class Routes {
 

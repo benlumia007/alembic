@@ -1,6 +1,6 @@
 <?php
 
-namespace Merlot\Controllers;
+namespace Benlumia007\Alembic\Controllers;
 
 class LiteraryTaxonomy extends Term {
 

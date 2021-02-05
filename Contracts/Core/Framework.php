@@ -1,28 +1,28 @@
 <?php
 /**
- * Application contract.
+ * Framework contract.
  *
- * The Application class should be the be the primary class for working with and
+ * The Framework class should be the be the primary class for working with and
  * launching the app. It extends the `Container` contract.
  *
- * @package   Merlot
+ * @package   Alembic
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright Copyright 2021. Benjamin Lu
  * @link      https://github.com/benlumia007/benjlu
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Merlot\Contracts\Core;
+namespace Benlumia007\Alembic\Contracts\Core;
 
-use Merlot\Contracts\Container\Container;
+use Benlumia007\Alembic\Contracts\Container\Container;
 
 /**
- * Application interface.
+ * Framework interface.
  *
  * @since  1.0.0
  * @access public
  */
-interface Application extends Container {
+interface Framework extends Container {
 
 	/**
 	 * Adds a service provider. Developers can pass in an object or a fully-

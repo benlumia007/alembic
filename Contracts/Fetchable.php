@@ -9,14 +9,14 @@
  * recommended to use an alternate method name, such as `get()`, and not use
  * this contract.
  *
- * @package   MerlotCore
+ * @package   Alembic
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2008 - 2018, Justin Tadlock
  * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Merlot\Contracts;
+namespace Benlumia007\Alembic\Contracts;
 
 /**
  * Fetchable interface.

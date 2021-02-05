@@ -5,14 +5,14 @@ function path( $path = '' ) {
 
 	$path = trim( $path, '/' );
 
-	return $path ? Merlot\App::resolve( 'path' ) . "/{$path}" : Merlot\App::resolve( 'path' );
+	return $path ? Benlumia007\Alembic\App::resolve( 'path' ) . "/{$path}" : Benlumia007\Alembic\App::resolve( 'path' );
 }
 
 function uri( $path = '' ) {
 
 	$path = trim( $path, '/' );
 
-	return $path ? Merlot\App::resolve( 'uri' ) . "/{$path}" : Merlot\App::resolve( 'uri' );
+	return $path ? Benlumia007\Alembic\App::resolve( 'uri' ) . "/{$path}" : Benlumia007\Alembic\App::resolve( 'uri' );
 }
 
 function public_path( $path = '' ) {
@@ -46,7 +46,7 @@ function resource_uri( $path = '' ) {
 function asset( $path ) {
 
 	// Get the Laravel Mix manifest.
-	$manifest = Merlot\App::resolve( 'mix' );
+	$manifest = Benlumia007\Alembic\App::resolve( 'mix' );
 
 	// Make sure to trim any slashes from the front of the path.
 	$path = '/' . ltrim( $path, '/' );
@@ -94,10 +94,10 @@ function request() {
 		$uri = substr( $uri, 0, strpos( $uri, '?' ) );
 	}
 
-	$uri = \Merlot\Tools\Str::slashBefore( $uri );
+	$uri = \Benlumia007\Alembic\Tools\Str::slashBefore( $uri );
 
 	// Home path.
-	// var_dump( trim( parse_url( \Merlot\App::resolve( 'uri' ), PHP_URL_PATH ), '/' ) );
+	// var_dump( trim( parse_url( \Benlumia007\Alembic\App::resolve( 'uri' ), PHP_URL_PATH ), '/' ) );
 
 	return $uri;
 }
@@ -128,13 +128,13 @@ function posts_per_page() {
 
 function cache( $name, $path = '' ) {
 
-	$cache = \Merlot\App::resolve( 'cache' );
+	$cache = \Benlumia007\Alembic\App::resolve( 'cache' );
 
 	if ( $cache->has( $name ) ) {
 		return $cache->get( $name );
 	}
 
-	$cache->add( $name, new \Merlot\Cache\Cache( $name, $path ) );
+	$cache->add( $name, new \Benlumia007\Alembic\Cache\Cache( $name, $path ) );
 
 	return $cache->get( $name );
 }

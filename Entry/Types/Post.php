@@ -7,20 +7,20 @@
  * one-true instance of the framework. It's used to load up service providers
  * that interact with the container.
  *
- * @package   Merlot
+ * @package   Benlumia007\Alembic
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright Copyright 2021. Benjamin Lu
  * @link      https://github.com/benlumia007/benjlu
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-namespace Merlot\Entry\Types;
+namespace Benlumia007\Alembic\Entry\Types;
 
-use Merlot\Controllers\Post as PostController;
-use Merlot\Controllers\PostDayArchive;
-use Merlot\Controllers\PostMonthArchive;
-use Merlot\Controllers\PostYearArchive;
-use Merlot\Routing\Routes;
-use Merlot\App;
+use Benlumia007\Alembic\Controllers\Post as PostController;
+use Benlumia007\Alembic\Controllers\PostDayArchive;
+use Benlumia007\Alembic\Controllers\PostMonthArchive;
+use Benlumia007\Alembic\Controllers\PostYearArchive;
+use Benlumia007\Alembic\Routing\Routes;
+use Benlumia007\Alembic\App;
 
 class Post extends Type {
 

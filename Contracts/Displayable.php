@@ -6,14 +6,14 @@
  * method is to output an HTML string to the screen. This data should already be
  * escaped prior to being output.
  *
- * @package   MerlotCore
+ * @package   Alembic
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2008 - 2018, Justin Tadlock
  * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Merlot\Contracts;
+namespace Benlumia007\Alembic\Contracts;
 
 /**
  * Displayable interface.

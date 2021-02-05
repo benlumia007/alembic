@@ -8,19 +8,19 @@
  * WordPress theme dev and isn't as powerful as some of the more robust
  * containers available in the larger PHP world.
  *
- * @package   Merlot
+ * @package   Alembic
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright Copyright 2021. Benjamin Lu
  * @link      https://github.com/benlumia007/benjlu
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Merlot\Container;
+namespace Benlumia007\Alembic\Container;
 
 use ArrayAccess;
 use Closure;
 use ReflectionClass;
-use Merlot\Contracts\Container\Container as ContainerContract;
+use Benlumia007\Alembic\Contracts\Container\Container as ContainerContract;
 
 /**
  * A simple container for objects.

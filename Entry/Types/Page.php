@@ -1,10 +1,10 @@
 <?php
 
-namespace Merlot\Entry\Types;
+namespace Benlumia007\Alembic\Entry\Types;
 
-use Merlot\Controllers\Page as Controller;
-use Merlot\Routing\Routes;
-use Merlot\App;
+use Benlumia007\Alembic\Controllers\Page as Controller;
+use Benlumia007\Alembic\Routing\Routes;
+use Benlumia007\Alembic\App;
 
 class Page extends Type {
 

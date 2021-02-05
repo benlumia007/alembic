@@ -1,6 +1,6 @@
 <?php
 
-namespace Merlot\Yaml;
+namespace Benlumia007\Alembic\Yaml;
 
 use Symfony\Component\Yaml\Yaml;
 

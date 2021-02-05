@@ -1,15 +1,15 @@
 <?php
 
-namespace Merlot\Controllers;
+namespace Benlumia007\Alembic\Controllers;
 
 use Suin\RSSWriter\Feed as RSSFeed;
 use Suin\RSSWriter\Channel;
 use Suin\RSSWriter\Item;
 
-use Merlot\App;
-use Merlot\ContentTypes;
-use Merlot\Entry\Entries;
-use Merlot\Entry\Locator;
+use Benlumia007\Alembic\App;
+use Benlumia007\Alembic\ContentTypes;
+use Benlumia007\Alembic\Entry\Entries;
+use Benlumia007\Alembic\Entry\Locator;
 
 class Feed {
 

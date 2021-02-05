@@ -1,11 +1,11 @@
 <?php
 
-namespace Merlot\Entry\Types;
+namespace Benlumia007\Alembic\Entry\Types;
 
-use Merlot\Controllers\LiteraryTaxonomy as LiteraryGenreController;
-use Merlot\Controllers\Collection as CollectionController;
-use Merlot\Routing\Routes;
-use Merlot\App;
+use Benlumia007\Alembic\Controllers\LiteraryTaxonomy as LiteraryGenreController;
+use Benlumia007\Alembic\Controllers\Collection as CollectionController;
+use Benlumia007\Alembic\Routing\Routes;
+use Benlumia007\Alembic\App;
 
 class LiteraryGenre extends Type {
 

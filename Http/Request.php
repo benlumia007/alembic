@@ -1,8 +1,8 @@
 <?php
 
-namespace Merlot\Http;
+namespace Benlumia007\Alembic\Http;
 
-use Merlot\Proxies\App;
+use Benlumia007\Alembic\Proxies\App;
 
 class Request {
 
@@ -20,14 +20,14 @@ class Request {
 			$uri = substr( $uri, 0, strpos( $uri, '?' ) );
 		}
 
-		$uri = \Merlot\Tools\Str::slashBefore( $uri );
+		$uri = \Benlumia007\Alembic\Tools\Str::slashBefore( $uri );
 
 		$uri = preg_replace( '/[^A-Za-z0-9\/_-]/i', '', $uri );
 
 	//	$this->maybeRedirect( $uri );
 
 		// Home path.
-		// var_dump( trim( parse_url( \Merlot\App::resolve( 'uri' ), PHP_URL_PATH ), '/' ) );
+		// var_dump( trim( parse_url( \Benlumia007\Alembic\App::resolve( 'uri' ), PHP_URL_PATH ), '/' ) );
 
 		return $uri;
 	}
