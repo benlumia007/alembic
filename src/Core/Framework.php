@@ -17,7 +17,7 @@
 namespace Benlumia007\Alembic\Core;
 
 use Benlumia007\Alembic\Container\Container;
-use Benlumia007\Alembic\Contracts\Core\Application as FrameworkContract;
+use Benlumia007\Alembic\Contracts\Core\Framework as FrameworkContract;
 use Benlumia007\Alembic\Contracts\Bootable;
 use Benlumia007\Alembic\Proxies\Proxy;
 use Benlumia007\Alembic\Proxies\App;
