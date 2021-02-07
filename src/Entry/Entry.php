@@ -3,7 +3,7 @@
 namespace Benlumia007\Alembic\Entry;
 
 use ParsedownExtra;
-//use Benlumia007\Alembic\Tools\Markdown;
+use Benlumia007\Alembic\Tools\Markdown;
 
 use Michelf\SmartyPants;
 use Michelf\SmartyPantsTypographer;
@@ -145,7 +145,7 @@ class Entry {
 
 	protected function parseContent( $content ) {
 
-		$parsedown = new ParsedownExtra();
+		$parsedown = new Markdown();
 
 		$content = preg_replace(
 			"/{{.+?media\(.+?['\"](.+?)['\"].+?\).+?}}/i",
