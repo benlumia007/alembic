@@ -8,7 +8,7 @@ use Benlumia007\Alembic\Entry\Locator;
 use Benlumia007\Alembic\Engine;
 use Benlumia007\Alembic\ContentTypes;
 
-class Category {
+class Taxonomy {
 
 	protected $params = [];
 
