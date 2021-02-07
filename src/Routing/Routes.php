@@ -16,9 +16,6 @@ use Benlumia007\Alembic\Http\Request;
 use Benlumia007\Alembic\Tools\Collection;
 
 class Routes {
-
-	protected $path = '/benjamin';
-
 	protected $routes;
 	protected $routers = [];
 	protected $route_regexes = [];
