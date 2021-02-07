@@ -121,7 +121,7 @@ class Markdown extends \ParsedownExtra
 			$InlineImage['element']
 		),
 		'attributes' => [
-			'class' => 'block-image ' . $class
+			'class' => 'post-thumbnail ' . $class
 			]
 		),
 	    );
