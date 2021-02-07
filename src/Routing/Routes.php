@@ -119,8 +119,6 @@ class Routes {
 
 				$this->current_route = $route;
 
-			//	var_dump( $route );
-
 				$callback( $params );
 				return;
 			}
@@ -128,7 +126,6 @@ class Routes {
 	}
 
 	public function request() {
-
-		return preg_replace( "#{$this->path}#", '', App::resolve( 'request' )->uri(), 1 );
+		return App::resolve( 'request' )->uri();
 	}
 }
