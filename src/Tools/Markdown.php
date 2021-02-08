@@ -46,7 +46,7 @@ class Markdown extends \ParsedownExtra
 		$id = strtolower( $id );
 
 		$Block['element']['text'] = sprintf(
-			'<a aria-hidden="true" href="#%1$s" id="%1$s" class="hidden sm:inline-block w-8 -ml-10 mr-2 font-secondary border-0">#</a>%2$s',
+			'<a aria-hidden="true" href="#%1$s" id="%1$s" class="sharp">#</a>%2$s',
 			$id,
 			$_text
 		);
