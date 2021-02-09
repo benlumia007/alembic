@@ -35,18 +35,15 @@ class Post extends Type {
 	}
 
 	public function routes() {
-
-	//	$this->router->get( 'archives/{year}/{month}/{day}/{name}', PostController::class );
-	//	$this->router->get( 'archives/{year}/{month}/{day}', PostDayArchive::class );
-	//	$this->router->get( 'archives/{year}/{month}', PostMonthArchive::class );
-	//	$this->router->get( 'archives/{year}', PostYearArchive::class );
-
-		$this->router->get( 'blog/{name}', PostController::class );
+		$this->router->get( 'archives/{year}/{month}/{day}/{name}', PostController::class );
+		$this->router->get( 'archives/{year}/{month}/{day}', PostDayArchive::class );
+		$this->router->get( 'archives/{year}/{month}', PostMonthArchive::class );
+		$this->router->get( 'archives/{year}', PostYearArchive::class );
 	}
 
 	public function uri( $path = '' ) {
 
-		$uri = App::resolve( 'uri' ) . '/blog';
+		$uri = App::resolve( 'uri' ) . '/archives';
 
 		return $path ? "{$uri}/{$path}" : $uri;
 	}
