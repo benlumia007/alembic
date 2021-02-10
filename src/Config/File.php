@@ -12,7 +12,8 @@
 /**
  * Define namespace
  */
-namespace Benlumia007\Alembic\Config; 
+namespace Benlumia007\Alembic\Config;
+use Benlumia007\Alembic\App;
 
 class File {
     private static $instance;
