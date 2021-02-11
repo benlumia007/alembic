@@ -43,7 +43,7 @@ class File {
 
         if ( empty($this->data) ) {
 
-            $this->data = App::resolve( 'yaml' )->load( 'user/content/_data/config.yml' );
+            $this->data = App::resolve( 'yaml' )->load( 'user/config/config.yml' );
 
         }
         return $this->data;
