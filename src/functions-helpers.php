@@ -1,18 +1,17 @@
 <?php
 
-
 function path( $path = '' ) {
 
 	$path = trim( $path, '/' );
 
-	return $path ? Benlumia007\Alembic\App::resolve( 'path' ) . "/{$path}" : Benlumia007\Alembic\App::resolve( 'path' );
+	return $path ? Nova\App::resolve( 'path' ) . "/{$path}" : Nova\App::resolve( 'path' );
 }
 
 function uri( $path = '' ) {
 
 	$path = trim( $path, '/' );
 
-	return $path ? Benlumia007\Alembic\App::resolve( 'uri' ) . "/{$path}" : Benlumia007\Alembic\App::resolve( 'uri' );
+	return $path ? Nova\App::resolve( 'uri' ) . "/{$path}" : Nova\App::resolve( 'uri' );
 }
 
 function public_path( $path = '' ) {
@@ -46,7 +45,7 @@ function resource_uri( $path = '' ) {
 function asset( $path ) {
 
 	// Get the Laravel Mix manifest.
-	$manifest = Benlumia007\Alembic\App::resolve( 'mix' );
+	$manifest = Nova\App::resolve( 'mix' );
 
 	// Make sure to trim any slashes from the front of the path.
 	$path = '/' . ltrim( $path, '/' );
@@ -94,10 +93,10 @@ function request() {
 		$uri = substr( $uri, 0, strpos( $uri, '?' ) );
 	}
 
-	$uri = \Benlumia007\Alembic\Tools\Str::slashBefore( $uri );
+	$uri = \Nova\Tools\Str::slashBefore( $uri );
 
 	// Home path.
-	// var_dump( trim( parse_url( \Benlumia007\Alembic\App::resolve( 'uri' ), PHP_URL_PATH ), '/' ) );
+	// var_dump( trim( parse_url( \Nova\App::resolve( 'uri' ), PHP_URL_PATH ), '/' ) );
 
 	return $uri;
 }
@@ -128,13 +127,13 @@ function posts_per_page() {
 
 function cache( $name, $path = '' ) {
 
-	$cache = \Benlumia007\Alembic\App::resolve( 'cache' );
+	$cache = \Nova\App::resolve( 'cache' );
 
 	if ( $cache->has( $name ) ) {
 		return $cache->get( $name );
 	}
 
-	$cache->add( $name, new \Benlumia007\Alembic\Cache\Cache( $name, $path ) );
+	$cache->add( $name, new \Nova\Cache\Cache( $name, $path ) );
 
 	return $cache->get( $name );
 }

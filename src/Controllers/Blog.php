@@ -14,7 +14,7 @@ class Home {
 
 		$this->params = $params;
 
-		Engine::view( 'home', [], [
+		Engine::view( 'blog', [], [
 			'page'    => isset( $this->params['number'] ) ? intval( $this->params['number'] ) : 1,
 			'entries' => $this->entries(),
 			'title'   => 'Benjamin Lu'
@@ -23,13 +23,20 @@ class Home {
 
 	protected function entries() {
 
-		// regular page - _index.md
-		$locator = new Locator();
+		$path = '_posts';
 
-		$entries = new Entries( $locator, [ 'slug' => '_index' ] );
+		$locator = new Locator( $path );
 
-		if ( $entries->all() ) {
-			return $entries;
-		}
+		$per_page = posts_per_page();
+		$current  = isset( $this->params['number'] ) ? intval( $this->params['number'] ) : 1;
+
+		$args = [
+			'number' => $per_page,
+			'offset' => $per_page * ( $current - 1 ),
+			'order'  => 'desc',
+		//	'orderby' => 'date'
+		];
+
+		return new Entries( $locator, $args );
 	}
 }
