@@ -43,12 +43,12 @@ class Feed {
 		$channel = new Channel();
 
 		$channel
-			->title( 'Justin Tadlock' )
+			->title( 'Benjamin Lu' )
 			->description( 'Life &amp; Stuff' )
 			->url( e( uri() ) )
 			->feedUrl( e( uri( 'feed' ) ) )
 			->language( 'en-US' )
-			->copyright( 'Copyright ' . date( 'Y' ) . ', Justin Tadlock' )
+			->copyright( 'Copyright ' . date( 'Y' ) . ', Benjamin Lu' )
 			->ttl( 60 )
 			->appendTo( $feed );
 
@@ -61,14 +61,14 @@ class Feed {
 				->description( $entry->excerpt() )
 				->contentEncoded( $entry->content() )
 				->url( e( $entry->uri() ) )
-				->author( $entry ? e( $entry->author()->title() ) : 'Justin Tadlock' )
-				->pubDate( $entry->meta( 'date' ) )
+				->author( $entry ? e( $entry->author()->title() ) : 'Benjamin Lu' )
+				->pubDate( strtotime( $entry->meta( 'date' ) ) )
 				->preferCdata( true )
 				->appendTo( $channel );
 		}
 
 		if ( ! empty( $entry ) ) {
-			$channel->pubDate( $entry->meta( 'date' ) )->lastBuildDate( $entry->meta( 'date' ) );
+			$channel->pubDate( strtotime( $entry->meta( 'date' ) ) )->lastBuildDate( strtotime( $entry->meta( 'date' ) ) );
 		}
 
 		return $feed;
