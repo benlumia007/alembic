@@ -6,7 +6,7 @@ use Benlumia007\Alembic\Entry\Entries;
 use Benlumia007\Alembic\Entry\Locator;
 use Benlumia007\Alembic\Engine;
 
-class Home {
+class Blog {
 
 	protected $params;
 
