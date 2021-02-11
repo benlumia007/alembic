@@ -93,10 +93,7 @@ function request() {
 		$uri = substr( $uri, 0, strpos( $uri, '?' ) );
 	}
 
-	$uri = \Nova\Tools\Str::slashBefore( $uri );
-
-	// Home path.
-	// var_dump( trim( parse_url( \Nova\App::resolve( 'uri' ), PHP_URL_PATH ), '/' ) );
+	$uri = Benlumia007\Alembic\Tools\Str::slashBefore( $uri );
 
 	return $uri;
 }
@@ -127,13 +124,13 @@ function posts_per_page() {
 
 function cache( $name, $path = '' ) {
 
-	$cache = \Nova\App::resolve( 'cache' );
+	$cache = Benlumia007\Alembic\App::resolve( 'cache' );
 
 	if ( $cache->has( $name ) ) {
 		return $cache->get( $name );
 	}
 
-	$cache->add( $name, new \Nova\Cache\Cache( $name, $path ) );
+	$cache->add( $name, new Benlumia007\Alembic\Cache\Cache( $name, $path ) );
 
 	return $cache->get( $name );
 }
