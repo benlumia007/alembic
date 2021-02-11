@@ -35,10 +35,12 @@ class Post extends Type {
 	}
 
 	public function routes() {
-		$this->router->get( '{year}/{month}/{day}/{name}', PostController::class );
-		$this->router->get( '{year}/{month}/{day}', PostDayArchive::class );
-		$this->router->get( '{year}/{month}', PostMonthArchive::class );
-		$this->router->get( '{year}', PostYearArchive::class );
+	//	$this->router->get( '{year}/{month}/{day}/{name}', PostController::class );
+	//	$this->router->get( '{year}/{month}/{day}', PostDayArchive::class );
+	//	$this->router->get( '{year}/{month}', PostMonthArchive::class );
+	//	$this->router->get( '{year}', PostYearArchive::class );
+
+	$this->router->get( 'blog/{name}', PostController::class );
 	}
 
 	public function uri( $path = '' ) {
