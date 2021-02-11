@@ -4,14 +4,14 @@ function path( $path = '' ) {
 
 	$path = trim( $path, '/' );
 
-	return $path ? Nova\App::resolve( 'path' ) . "/{$path}" : Nova\App::resolve( 'path' );
+	return $path ? Benlumia007\Alembic\App::resolve( 'path' ) . "/{$path}" : Benlumia007\Alembic\App::resolve( 'path' );
 }
 
 function uri( $path = '' ) {
 
 	$path = trim( $path, '/' );
 
-	return $path ? Nova\App::resolve( 'uri' ) . "/{$path}" : Nova\App::resolve( 'uri' );
+	return $path ? Benlumia007\Alembic\App::resolve( 'uri' ) . "/{$path}" : Benlumia007\Alembic\App::resolve( 'uri' );
 }
 
 function public_path( $path = '' ) {
@@ -45,7 +45,7 @@ function resource_uri( $path = '' ) {
 function asset( $path ) {
 
 	// Get the Laravel Mix manifest.
-	$manifest = Nova\App::resolve( 'mix' );
+	$manifest = Benlumia007\Alembic\App::resolve( 'mix' );
 
 	// Make sure to trim any slashes from the front of the path.
 	$path = '/' . ltrim( $path, '/' );
