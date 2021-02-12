@@ -44,7 +44,7 @@ class Feed {
 
 		$channel
 			->title( 'Benjamin Lu' )
-			->description( 'Life &amp; Stuff' )
+			->description( 'Life and Stuff' )
 			->url( e( uri() ) )
 			->feedUrl( e( uri( 'feed' ) ) )
 			->language( 'en-US' )
