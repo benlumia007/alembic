@@ -43,12 +43,12 @@ class Feed {
 		$channel = new Channel();
 
 		$channel
-			->title( 'Benjamin Lu' )
-			->description( 'Life and Stuff' )
+			->title( e( site_title() ) )
+			->description( e( site_tagline() ) )
 			->url( e( uri() ) )
 			->feedUrl( e( uri( 'feed' ) ) )
 			->language( 'en-US' )
-			->copyright( 'Copyright ' . date( 'Y' ) . ', Benjamin Lu' )
+			->copyright( 'Copyright ' . date( 'Y' ), e( site_title() ) )
 			->ttl( 60 )
 			->appendTo( $feed );
 
@@ -61,7 +61,7 @@ class Feed {
 				->description( $entry->excerpt() )
 				->contentEncoded( $entry->content() )
 				->url( e( $entry->uri() ) )
-				->author( $entry ? e( $entry->author()->title() ) : 'Benjamin Lu' )
+				->author( $entry ? e( $entry->author()->title() ) : e( site_title() ) )
 				->pubDate( strtotime( $entry->meta( 'date' ) ) )
 				->preferCdata( true )
 				->appendTo( $channel );
