@@ -145,7 +145,7 @@ class Entry {
 
 	protected function parseContent( $content ) {
 
-		$parsedown = new Markdown();
+		$parsedown = new ParsedownExtra();
 
 		$content = preg_replace(
 			"/{{.+?media\(.+?['\"](.+?)['\"].+?\).+?}}/i",
