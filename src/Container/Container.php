@@ -381,9 +381,9 @@ class Container implements ContainerContract, ArrayAccess {
 
 		foreach ( $dependencies as $dependency ) {
 
-			if ( ! is_null( $dependency->getClass() ) ) {
+			if ( ! is_null( $dependency->getType() ) ) {
 
-				$params[] = $this->resolve( $dependency->getClass()->getName() );
+				$params[] = $this->resolve( $dependency->getType()->getName() );
 
 			} elseif ( $dependency->isDefaultValueAvailable() ) {
 
