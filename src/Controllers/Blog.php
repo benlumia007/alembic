@@ -17,7 +17,7 @@ class Blog {
 		Engine::view( 'blog', [], [
 			'page'    => isset( $this->params['number'] ) ? intval( $this->params['number'] ) : 1,
 			'entries' => $this->entries(),
-			'title'   => 'Benjamin Lu'
+			'title'   => e( site_title() ),
 		] )->display();
 	}
 
