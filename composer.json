@@ -19,6 +19,8 @@
             "Benlumia007\\Alembic\\": "src/"
 		},
         "files":[
+            "src/Menu/functions-menu.php",
+            "src/Site/functions-site.php",
             "src/functions-helpers.php"
         ]
 	},
