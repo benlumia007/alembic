@@ -1,7 +1,5 @@
 <?php
 
-namespace Benlumia007\Alembic\Menu;
-
 function primary() {
 	$data = Benlumia007\Alembic\Config\File::get_instance()->get_data();
 	foreach ($data['primary'] as $name => $title ) { ?>
