@@ -3,7 +3,7 @@
 namespace Benlumia007\Alembic\Entry\Types;
 
 use Benlumia007\Alembic\Controllers\Portfolio as PortfolioController;
-use Benlumia007\Alembic\Controllers\PortfolioArchive;
+use Benlumia007\Alembic\Controllers\PortfolioArchives;
 
 class Portfolio extends Type {
 
@@ -20,8 +20,8 @@ class Portfolio extends Type {
 	public function routes() {
 
 		$this->router->get( 'portfolio/{name}', Controller::class );
-		$this->router->get( 'portfolio', PortfolioArchive::class );
-		$this->router->get( 'portfolio/page/{number}', PortfolioArchive::class, 'top' );
+		$this->router->get( 'portfolio', PortfolioArchives::class );
+		$this->router->get( 'portfolio/page/{number}', PortfolioArchives::class, 'top' );
 	}
 
 	public function uri( $path = '' ) {
