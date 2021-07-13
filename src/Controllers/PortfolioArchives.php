@@ -20,7 +20,7 @@ class PortfolioArchives {
 		$terms = ( new Entries( $locator, [ 'slug' => '_index' ] ) )->all();
 
 		Engine::view( 'collection', [], [
-			'title'   => 'Writing',
+			'title'   => 'Portfolio',
 			'query'   => array_shift( $terms ),
 			'page'    => isset( $this->params['number'] ) ? intval( $this->params['number'] ) : 1,
 			'entries' => $this->entries()
