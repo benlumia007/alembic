@@ -19,7 +19,7 @@ class Portfolio extends Type {
 
 	public function routes() {
 
-		$this->router->get( 'portfolio/{name}', Controller::class );
+		$this->router->get( 'portfolio/{name}', PortfolioController::class );
 		$this->router->get( 'portfolio', PortfolioArchives::class );
 		$this->router->get( 'portfolio/page/{number}', PortfolioArchives::class, 'top' );
 	}
