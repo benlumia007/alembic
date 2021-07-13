@@ -23,34 +23,25 @@ use Benlumia007\Alembic\Routing\Routes;
 use Benlumia007\Alembic\App;
 
 class Post extends Type {
-
 	public function name() {
-
 		return 'post';
 	}
 
 	public function path() {
-
 		return '_posts';
 	}
 
 	public function routes() {
-	//	$this->router->get( '{year}/{month}/{day}/{name}', PostController::class );
-	//	$this->router->get( '{year}/{month}/{day}', PostDayArchive::class );
-	//	$this->router->get( '{year}/{month}', PostMonthArchive::class );
-	//	$this->router->get( '{year}', PostYearArchive::class );
-
-	$this->router->get( 'blog/{name}', PostController::class );
+		$this->router->get( 'archives/{year}/{month}/{day}/{name}', PostController::class );
+		$this->router->get( 'archives/{year}/{month}/{day}', PostDayArchive::class );
+		$this->router->get( 'archives/{year}/{month}', PostMonthArchive::class );
+		$this->router->get( 'archives/{year}', PostYearArchive::class );
 	}
 
 	public function uri( $path = '' ) {
 
-		$uri = App::resolve( 'uri/relative' );
+		$uri = App::resolve( 'uri' ) . '/archives';
 
 		return $path ? "{$uri}/{$path}" : $uri;
 	}
-
-
-
-
 }
