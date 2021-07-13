@@ -8,35 +8,38 @@ use Benlumia007\Alembic\Engine;
 use Benlumia007\Alembic\App;
 
 class Portfolio {
-    protected $slug;
-    protected $path = '_portfolio';
 
-    protected $type;
-    protected $params = [];
+	protected $slug;
+	protected $path = '_portfolio';
 
-    public function __invoke( array $params = [] ) {
-        $this->params = ( array ) $params;
+	protected $type;
+	protected $params = [];
 
-        $this->slug = $this->params['name'];
+	public function __invoke( array $params = [] ) {
 
-        $this->type = App::resolve( 'content/type')->get( 'portfolio' );
+		$this->params = (array) $params;
 
-        $entries = $this->entries();
+		$this->slug = $this->params['name'];
 
-        $all = $entries->all();
+		$this->type = App::resolve( 'content/types' )->get( 'portfolio' );
+
+		$entries = $this->entries();
+
+		$all = $entries->all();
 		$entry = array_shift( $all );
 
-        Engine::view( 'portfolio', [], [
+		Engine::view( 'portfolio', [], [
 			'title'   => $entry ? $entry->title() : 'Not Found',
 			'query'   => $entry ? $entry : false,
 			'page'    => 1,
 			'entries' => $entries
 		] )->display();
-    }
+	}
 
-    protected function entries() {
-        $locator = new Locator( $this->type->path() );
+	protected function entries() {
+
+		$locator = new Locator( $this->type->path() );
 
 		return new Entries( $locator, [ 'slug' => $this->slug ] );
-    }
+	}
 }
