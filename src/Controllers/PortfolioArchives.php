@@ -7,7 +7,7 @@ use Benlumia007\Alembic\Entry\Locator;
 use Benlumia007\Alembic\Engine;
 use Benlumia007\Alembic\ContentTypes;
 
-class PortfolioArchive {
+class PortfolioArchives {
 
 	protected $params;
 
