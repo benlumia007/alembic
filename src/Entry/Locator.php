@@ -76,7 +76,7 @@ class Locator {
 
 		$located = [];
 
-		foreach ( (array) $entries as $filename => $data ) {
+		foreach ( (array ) $entries as $filename => $data ) {
 
 			$filename = App::resolve( 'path' ) . "/{$this->path}/{$filename}";
 
