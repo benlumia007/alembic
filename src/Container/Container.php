@@ -11,7 +11,7 @@
  * @package   Alembic
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright Copyright 2021. Benjamin Lu
- * @link      https://github.com/benlumia007/benjlu
+ * @link      https://github.com/benlumia007/alembic-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
