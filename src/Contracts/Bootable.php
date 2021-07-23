@@ -8,10 +8,10 @@
  * the class constructor. Most bootable classes are meant to be single-instance
  * classes that get loaded once per page request.
  *
- * @package   Benlumia007\Alembic
+ * @package   Alembic Core
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright Copyright 2021. Benjamin Lu
- * @link      https://github.com/benlumia007/benjlu
+ * @link      https://github.com/benlumia007/alembic-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
