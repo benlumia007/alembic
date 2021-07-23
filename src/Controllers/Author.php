@@ -21,7 +21,7 @@ class Author {
 		$locator = new Locator( $path );
 		$terms = ( new Entries( $locator, [ 'slug' => $this->slug ] ) )->all();
 
-		Engine::view( 'taxonomy', [], [
+		Engine::view( 'author', [], [
 			'page'    => 1,
 			'entries' => $this->entries(),
 			'query'   => array_shift( $terms )
@@ -34,7 +34,7 @@ class Author {
 
 		$locator = new Locator( $path );
 
-		$per_page = PHP_INT_MAX;//2;//posts_per_page();
+		$per_page = PHP_INT_MAX;
 		$current = isset( $this->params['number'] ) ? intval( $this->params['number'] ) : 1;
 
 		$args = [
