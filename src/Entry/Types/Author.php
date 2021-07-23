@@ -3,7 +3,6 @@
 namespace Benlumia007\Alembic\Entry\Types;
 
 use Benlumia007\Alembic\Controllers\Author as AuthorController;
-use Benlumia007\Alembic\Controllers\Collection as CollectionController;
 use Benlumia007\Alembic\Routing\Routes;
 use Benlumia007\Alembic\App;
 
@@ -20,12 +19,7 @@ class Author extends Type {
 	}
 
 	public function routes() {
-
-	//	$this->router->get( 'authors/{name}/page/{number}', AuthorController::class, 'top' );
-
-	//	$this->router->get( 'authors/{name}', AuthorController::class );
-
-	//	$this->router->get( 'authors', CollectionController::class );
+		$this->router->get( 'author/{name}', AuthorController::class );
 	}
 
 	public function uri( $path = '' ) {
@@ -38,7 +32,7 @@ class Author extends Type {
 			}
 		}
 
-		$uri = App::resolve( 'uri/relative' ) . '/authors';
+		$uri = App::resolve( 'uri/relative' ) . '/author';
 
 		return $path ? "{$uri}/{$path}" : $uri;
 	}
