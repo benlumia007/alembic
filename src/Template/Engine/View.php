@@ -23,7 +23,7 @@ class View {
 			}
 		}
 
-		return path( "{$this->name}.php" );
+		return public_path( "{$this->name}.php" );
 	}
 
 	public function display() {
