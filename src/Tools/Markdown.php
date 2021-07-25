@@ -30,30 +30,6 @@ class Markdown extends \ParsedownExtra
 		return $Link;
 	}
 
-	protected function blockHeader( $Line ) {
-
-		$Block = parent::blockHeader( $Line );
-
-		//var_dump( $Block );
-
-		$_text = $Block['element']['text'];
-
-		$text = trim( $Line['text'], '# ' );
-
-		$id = str_replace( ' ', '-', $text );
-		$id = preg_replace( '|%[a-fA-F0-9][a-fA-F0-9]|', '', $id );
-		$id = preg_replace( '/[^A-Za-z0-9_-]/', '', $id );
-		$id = strtolower( $id );
-
-		$Block['element']['text'] = sprintf(
-			'<a aria-hidden="true" href="#%1$s" id="%1$s" class="entry-anchor">#</a>%2$s',
-			$id,
-			$_text
-		);
-
-		return $Block;
-	}
-
 	protected function blockFigure($Line) {
 
 	    // If line does not match image def, don't handle it
