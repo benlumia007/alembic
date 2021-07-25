@@ -18,8 +18,8 @@ class View {
 
 		foreach ( $this->slugs as $slug ) {
 
-			if ( file_exists( path( "{$this->name}-{$slug}.php" ) ) ) {
-				return path( "{$this->name}-{$slug}.php" );
+			if ( file_exists( public_path( "{$this->name}-{$slug}.php" ) ) ) {
+				return public_path( "{$this->name}-{$slug}.php" );
 			}
 		}
 
