@@ -34,7 +34,7 @@ class PortfolioArchives {
 		$locator = new Locator( $path );
 
 		//$per_page = posts_per_page();
-		$per_page = PHP_INT_MAX;//posts_per_page();
+		$per_page = 9;
 		//$current  = $this->page;//intval( trim( preg_replace( '/.*?page\/([\d]).*?/i', '$1', request() ), '/' ) );
 		$current  = isset( $this->params['number'] ) ? intval( $this->params['number'] ) : 1;
 
