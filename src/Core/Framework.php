@@ -21,7 +21,7 @@ use Benlumia007\Alembic\Contracts\Core\Framework as FrameworkContract;
 use Benlumia007\Alembic\Contracts\Bootable;
 use Benlumia007\Alembic\Proxies\Proxy;
 use Benlumia007\Alembic\Proxies\App;
-
+use Benlumia007\Alembic\Routing\Provider as RoutesServiceProvider;
 /**
  * Application class.
  *
@@ -102,7 +102,13 @@ class Framework extends Container implements FrameworkContract, Bootable {
 		$this->instance( 'version', static::VERSION );
 	}
 
-	protected function registerDefaultProviders() {}
+	protected function registerDefaultProviders() {
+		array_map( function( $provider ) {
+			$this->provider( $provider );
+		}, [
+            RoutesServiceProvider::class,
+		] );
+	}
 
 	/**
 	 * Adds the default static proxy classes.
