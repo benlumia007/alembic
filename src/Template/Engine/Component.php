@@ -9,4 +9,12 @@ class Component {
 
 		return new View( $name, $slugs, $data );
 	}
+
+	public function display( $name, array $slugs = [], $data = [] ) {
+		$this->view( $name, $slugs, $data)->display();
+	}
+
+	public function render( $name, array $slugs = [], $data = [] ) {
+		return $this->view( $name, $slugs, $data)->render();
+	}
 }
