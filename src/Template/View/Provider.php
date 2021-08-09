@@ -17,6 +17,7 @@ namespace Benlumia007\Alembic\Template\View;
 
 use Benlumia007\Alembic\Tools\ServiceProvider;
 use Benlumia007\Alembic\Template\Engine\Component as Engine;
+use Benlumia007\Alembic\Proxies\Engine as ProxyEngine;
 /**
  * View provider class.
  *
@@ -36,5 +37,8 @@ class Provider extends ServiceProvider {
 
 		// Bind a single instance of the engine contract.
 		$this->app->singleton( 'template/engine', Engine::class );
+
+		// Let's add a proxy for the Engine
+		$this->app->proxy( ProxyEngine::class, 'Benlumia007\Alembic\Engine' );
 	}
 }
