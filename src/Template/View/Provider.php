@@ -13,10 +13,10 @@
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-namespace Benlumia007\Backdrop\Template\View;
+namespace Benlumia007\Alembic\Template\View;
 
-use Benlumia007\Backdrop\Tools\ServiceProvider;
-use Benlumia007\Backdrop\Template\Engine\Component as Engine;
+use Benlumia007\Alembic\Tools\ServiceProvider;
+use Benlumia007\Alembic\Template\Engine\Component as Engine;
 /**
  * View provider class.
  *
