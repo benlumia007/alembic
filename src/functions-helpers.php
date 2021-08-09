@@ -21,25 +21,11 @@ function public_path( $path = '' ) {
 	return $path ? path( "public/{$path}" ) : path( 'public' );
 }
 
-function resource_path( $path = '' ) {
-
-	$path = trim( $path, '/' );
-
-	return $path ? path( "resources/{$path}" ) : path( 'resources' );
-}
-
 function public_uri( $path = '' ) {
 
 	$path = trim( $path, '/' );
 
 	return $path ? uri( "public/{$path}" ) : uri( 'public' );
-}
-
-function resource_uri( $path = '' ) {
-
-	$path = trim( $path, '/' );
-
-	return $path ? uri( "resources/{$path}" ) : uri( 'resources' );
 }
 
 function asset( $path ) {
