@@ -10,10 +10,10 @@ class Collection {
 
 	public function __invoke() {
 
-		Engine::view( 'collection', [], [
+		Engine::display( 'collection', [], [
 			'page'    => 1,
 			'entries' => $this->entries()
-		] )->display();
+		] );
 	}
 
 	protected function entries() {

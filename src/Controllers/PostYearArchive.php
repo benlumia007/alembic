@@ -21,12 +21,12 @@ class PostYearArchive {
 
 		//$terms = ( new Entries( $locator, [ 'slug' => $this->slug ] ) )->all();
 
-		Engine::view( 'archive', [], [
+		Engine::display( 'archive', [], [
 			'page'    => 1,
 			'entries' => $this->entries(),
 			'title'   => isset( $params['year'] ) ? $params['year'] : 'Not Found'
 		//	'query'   => array_shift( $terms )
-		] )->display();
+		] );
 	}
 
 	protected function entries() {

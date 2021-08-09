@@ -28,12 +28,12 @@ class Portfolio {
 		$all = $entries->all();
 		$entry = array_shift( $all );
 
-		Engine::view( 'portfolio', [], [
+		Engine::display( 'portfolio', [], [
 			'title'   => $entry ? $entry->title() : 'Not Found',
 			'query'   => $entry ? $entry : false,
 			'page'    => 1,
 			'entries' => $entries
-		] )->display();
+		] );
 	}
 
 	protected function entries() {

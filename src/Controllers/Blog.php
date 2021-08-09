@@ -14,11 +14,11 @@ class Blog {
 
 		$this->params = $params;
 
-		Engine::view( 'blog', [], [
+		Engine::display( 'blog', [], [
 			'page'    => isset( $this->params['number'] ) ? intval( $this->params['number'] ) : 1,
 			'entries' => $this->entries(),
 			'title'   => e( site_title() ),
-		] )->display();
+		] );
 	}
 
 	protected function entries() {

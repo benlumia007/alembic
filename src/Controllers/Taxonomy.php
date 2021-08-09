@@ -22,11 +22,11 @@ class Taxonomy {
 		$locator = new Locator( $path );
 		$terms = ( new Entries( $locator, [ 'slug' => $this->slug ] ) )->all();
 
-		Engine::view( 'taxonomy', [], [
+		Engine::display( 'taxonomy', [], [
 			'page'    => 1,
 			'entries' => $this->entries(),
 			'query'   => array_shift( $terms )
-		] )->display();
+		] );
 	}
 
 	protected function entries() {

@@ -41,12 +41,12 @@ class Page {
 			die();
 		}
 
-		Engine::view( 'page', [ $this->slug ], [
+		Engine::display( 'page', [ $this->slug ], [
 			'title'   => $entry ? $entry->title() : 'Not Found',
 			'query'   => $entry ? $entry : false,
 			'page'    => 1,
 			'entries' => $entries
-		] )->display();
+		] );
 	}
 
 	protected function entries() {

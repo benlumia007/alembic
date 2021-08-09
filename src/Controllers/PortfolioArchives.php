@@ -19,12 +19,12 @@ class PortfolioArchives {
 		$locator = new Locator( $path );
 		$terms = ( new Entries( $locator, [ 'slug' => '_index' ] ) )->all();
 
-		Engine::view( 'archive-portfolio', [], [
+		Engine::display( 'archive-portfolio', [], [
 			'title'   => 'Portfolio',
 			'query'   => array_shift( $terms ),
 			'page'    => isset( $this->params['number'] ) ? intval( $this->params['number'] ) : 1,
 			'entries' => $this->entries()
-		] )->display();
+		] );
 	}
 
 	protected function entries() {

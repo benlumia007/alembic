@@ -21,11 +21,11 @@ class Author {
 		$locator = new Locator( $path );
 		$terms = ( new Entries( $locator, [ 'slug' => $this->slug ] ) )->all();
 
-		Engine::view( 'author', [], [
+		Engine::display( 'author', [], [
 			'page'    => 1,
 			'entries' => $this->entries(),
 			'query'   => array_shift( $terms )
-		] )->display();
+		] );
 	}
 
 	protected function entries() {
