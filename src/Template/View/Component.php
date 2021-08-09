@@ -1,8 +1,8 @@
 <?php
 
-namespace Benlumia007\Alembic\Template\Engine;
+namespace Benlumia007\Alembic\Template\View;
 
-class View {
+class Component {
 
 	protected $name;
 	protected $data;
