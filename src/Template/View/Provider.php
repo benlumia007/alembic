@@ -35,6 +35,6 @@ class Provider extends ServiceProvider {
 	public function register() {
 
 		// Bind a single instance of the engine contract.
-		$this->app->singleton( 'view/engine', Engine::class );
+		$this->app->singleton( 'template/engine', Engine::class );
 	}
 }
