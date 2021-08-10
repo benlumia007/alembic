@@ -13,7 +13,7 @@
  * Define namespace
  */
 namespace Benlumia007\Alembic\Config;
-use Benlumia007\Alembic\App;
+use Benlumia007\Alembic\Yaml;
 
 class File {
     private static $instance;
@@ -43,7 +43,7 @@ class File {
 
         if ( empty($this->data) ) {
 
-            $this->data = App::resolve( 'yaml' )::parseFile( 'user/config/config.yml' );
+            $this->data = Yaml::parseFile( 'user/config/config.yml' );
 
         }
         return $this->data;
