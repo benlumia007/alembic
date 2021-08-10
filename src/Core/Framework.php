@@ -27,6 +27,7 @@ use Benlumia007\Alembic\Template\View\Provider as ViewServiceProvider;
 use Benlumia007\Alembic\Config\Provider as FileServiceProvider;
 use Benlumia007\Alembic\Entry\Provider as ContentTypesServiceProvider;
 use Benlumia007\Alembic\Cache\Provider as CacheServiceProvider;
+use Benlumia007\Alembic\Misc\Provider as MiscServiceProvider;
 /**
  * Application class.
  *
@@ -117,6 +118,7 @@ class Framework extends Container implements FrameworkContract, Bootable {
 			FileServiceProvider::class,
 			ContentTypesServiceProvider::class,
 			CacheServiceProvider::class,
+			MiscServiceProvider::class,
 		] );
 	}
 
