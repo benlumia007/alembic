@@ -33,9 +33,6 @@ class Provider extends ServiceProvider {
 	 */
 	public function register() {
 
-		// Bind a single instance of the engine contract.
-		$this->app->singleton( 'yaml', File::class );
-
         // Add proxy
         $this->app->proxy( Yaml::class, 'Benlumia007\Alembic\Yaml' );
 	}
