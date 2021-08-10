@@ -24,6 +24,7 @@ use Benlumia007\Alembic\Proxies\App;
 use Benlumia007\Alembic\Routing\Provider as RoutesServiceProvider;
 use Benlumia007\Alembic\Http\Provider as RequestServiceProvider;
 use Benlumia007\Alembic\Template\View\Provider as ViewServiceProvider;
+use Benlumia007\Alembic\Config\Provider as FileServiceProvider;
 /**
  * Application class.
  *
@@ -111,6 +112,7 @@ class Framework extends Container implements FrameworkContract, Bootable {
 			RequestServiceProvider::class,
             RoutesServiceProvider::class,
 			ViewServiceProvider::class,
+			FileServiceProvider::class,
 		] );
 	}
 
